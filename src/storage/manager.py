@@ -1,6 +1,7 @@
 """Storage manager for configuration and state persistence."""
 
 import json
+import shutil
 from pathlib import Path
 
 from ..models import Config
@@ -28,6 +29,25 @@ class StorageManager:
             data = json.load(f)
 
         return Config.model_validate(data)
+
+    def save_config(self, config: Config, backup: bool = True) -> Path:
+        """Save configuration to config.json, optionally backing up the existing file.
+
+        Args:
+            config: The Config object to save.
+            backup: If True and config.json exists, copy it to config.json.bak first.
+
+        Returns:
+            Path to the saved config file.
+        """
+        if backup and self.config_path.exists():
+            shutil.copy2(self.config_path, self.config_path.with_suffix(".json.bak"))
+
+        with open(self.config_path, "w", encoding="utf-8") as f:
+            json.dump(config.model_dump(mode="json"), f, indent=2, ensure_ascii=False)
+            f.write("\n")
+
+        return self.config_path
 
     def save_daily_summary(self, date: str, markdown: str, language: str = "en") -> Path:
         filename = f"horizon-{date}-{language}.md"

@@ -10,7 +10,7 @@
 [![Daily Summary](https://github.com/Thysrael/Horizon/actions/workflows/deploy-docs.yml/badge.svg?style=flat-square)](https://thysrael.github.io/Horizon/)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Thysrael/Horizon?style=flat-square)](https://github.com/Thysrael/Horizon/commits/main)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-
+![Sources Welcome](https://img.shields.io/badge/📡_sources-welcome-f97316?style=flat-square)
 <br>
 
 ![Claude](https://img.shields.io/badge/Claude-f0daba?style=flat-square&logo=anthropic&logoColor=black)
@@ -61,6 +61,7 @@ Horizon collects news from multiple customizable sources, uses AI to score and f
 - **📧 Email Subscription** — Self-hosted newsletter system (SMTP/IMAP) that handles "Subscribe" requests automatically
 - **📝 Static Site Generation** — Deploys as a GitHub Pages site via GitHub Actions, updated on a schedule
 - **⚙️ Fully Configurable** — Single JSON config file, easy to customize sources, thresholds, and AI providers
+- **🧙 Setup Wizard** — Interactive CLI that recommends sources based on your interests, with a [curated preset library](https://thysrael.github.io/Horizon/presets) open to community contributions
 
 ## How It Works
 
@@ -120,6 +121,16 @@ docker-compose run --rm horizon --hours 48
 ```
 
 ### 2. Configure
+
+**Option A: Interactive wizard (recommended)**
+
+```bash
+uv run horizon-wizard
+```
+
+The wizard asks about your interests (e.g. "LLM inference", "嵌入式", "web security") and auto-generates `data/config.json` from a [curated preset library](https://thysrael.github.io/Horizon/presets) + optional AI recommendations.
+
+**Option B: Manual configuration**
 
 ```bash
 cp .env.example .env          # Add your API keys
@@ -215,7 +226,7 @@ See [`src/mcp/README.md`](src/mcp/README.md) for the full tool reference and [`s
 - [x] **Docker deployment support**
 - [x] **MCP server integration**
 - [x] Web UI dashboard
-- [ ] **Smart source setup wizard** — conversational tool that recommends and configures sources based on user interests (e.g. "I follow embodied AI")
+- [x] **Setup Wizard** — interactive CLI that recommends sources based on user interests
 - [ ] **Improved Web UI** — better digest and article detail experience
 - [ ] Slack / Webhook notification
 - [ ] More source types (Twitter/X, Discord, etc.)
@@ -224,6 +235,16 @@ See [`src/mcp/README.md`](src/mcp/README.md) for the full tool reference and [`s
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
+
+### 📡 Contribute Source Presets
+
+Horizon's setup wizard uses a community-maintained [preset library](https://thysrael.github.io/Horizon/presets) to recommend sources. **We'd love your help expanding it!**
+
+1. Fork this repo
+2. Add your sources to `data/presets.json` (provide both English and Chinese descriptions)
+3. Submit a PR
+
+Great candidates: niche RSS feeds, active subreddits, notable GitHub accounts, or Telegram channels in your area of expertise.
 
 ## License
 

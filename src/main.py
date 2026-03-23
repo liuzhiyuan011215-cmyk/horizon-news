@@ -54,7 +54,10 @@ def main():
             config = storage.load_config()
         except FileNotFoundError:
             console.print("[bold red]❌ Configuration file not found![/bold red]\n")
-            console.print("Please create [cyan]data/config.json[/cyan] based on the template:\n")
+            console.print(
+                "Run [bold cyan]uv run horizon-wizard[/bold cyan] to launch the interactive setup wizard,\n"
+                "or create [cyan]data/config.json[/cyan] manually based on the template:\n"
+            )
             print_config_template()
             sys.exit(1)
         except Exception as e:
