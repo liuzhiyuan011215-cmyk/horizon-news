@@ -247,7 +247,7 @@ uv run horizon-mcp
 
 欢迎贡献！请随时提交 Issue 或 Pull Request。
 
-### 📡 贡献信息源预设
+### 贡献信息源预设
 
 Horizon 的配置向导使用社区维护的[预设源库](https://thysrael.github.io/Horizon/presets)来推荐信息源。**我们非常欢迎你来扩充它！**
 
@@ -256,6 +256,11 @@ Horizon 的配置向导使用社区维护的[预设源库](https://thysrael.gith
 3. 提交 PR
 
 好的候选源：小众但高质量的 RSS 订阅、活跃的 subreddit、值得关注的 GitHub 账号、或你擅长领域的 Telegram 频道。
+
+## 鸣谢
+
+- 特别感谢 [LINUX.DO](https://linux.do/) 提供的宣传平台。
+- 特别感谢 [HelloGitHub](https://hellogithub.com/) 提供的指导意见。
 
 ## 许可证
 

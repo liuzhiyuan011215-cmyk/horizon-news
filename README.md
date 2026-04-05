@@ -236,7 +236,7 @@ See [`src/mcp/README.md`](src/mcp/README.md) for the full tool reference and [`s
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
 
-### 📡 Contribute Source Presets
+### Contribute Source Presets
 
 Horizon's setup wizard uses a community-maintained [preset library](https://thysrael.github.io/Horizon/presets) to recommend sources. **We'd love your help expanding it!**
 
@@ -245,6 +245,11 @@ Horizon's setup wizard uses a community-maintained [preset library](https://thys
 3. Submit a PR
 
 Great candidates: niche RSS feeds, active subreddits, notable GitHub accounts, or Telegram channels in your area of expertise.
+
+## Acknowledgements
+
+- Special thanks to [LINUX.DO](https://linux.do/) for providing a promotion platform.
+- Special thanks to [HelloGitHub](https://hellogithub.com/) for valuable guidance and suggestions.
 
 ## License
 
