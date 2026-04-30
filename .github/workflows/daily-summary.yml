@@ -21,7 +21,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install -e . python-dateutil
+        run: pip install -e . python-dateutil httpx feedparser anthropic openai google-genai pydantic rich tenacity python-dotenv ddgs beautifulsoup4 markdown mcp
 
       - name: Run Horizon
         env:
