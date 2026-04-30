@@ -152,8 +152,7 @@ class OpenAIClient(AIClient):
                 {"role": "user", "content": user}
             ],
             temperature=temperature,
-            max_tokens=max_tokens,
-            response_format={"type": "json_object"}
+            max_tokens=max_tokens
         )
         usage = getattr(response, "usage", None)
         if usage is not None:
