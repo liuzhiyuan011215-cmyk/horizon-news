@@ -6,55 +6,18 @@
     "api_key_env": "OPENAI_API_KEY",
     "base_url": "https://token-plan-sgp.xiaomimimo.com/v1",
     "temperature": 0.3,
-    "max_tokens": 4096,
+    "max_tokens": 2048,
     "throttle_sec": 0
   },
   "languages": ["zh"],
   "sources": {
-    "github": [
-      {
-        "type": "repo_releases",
-        "owner": "facebook",
-        "repo": "react",
-        "enabled": true
-      },
-      {
-        "type": "repo_releases",
-        "owner": "vuejs",
-        "repo": "core",
-        "enabled": true
-      },
-      {
-        "type": "repo_releases",
-        "owner": "vercel",
-        "repo": "next.js",
-        "enabled": true
-      },
-      {
-        "type": "repo_releases",
-        "owner": "microsoft",
-        "repo": "vscode",
-        "enabled": true
-      }
-    ],
+    "github": [],
     "hackernews": {
       "enabled": true,
-      "fetch_top_stories": 20,
-      "min_score": 50
+      "fetch_top_stories": 10,
+      "min_score": 100
     },
     "rss": [
-      {
-        "name": "36氪",
-        "url": "https://36kr.com/feed",
-        "enabled": true,
-        "category": "tech-news"
-      },
-      {
-        "name": "虎嗅",
-        "url": "https://www.huxiu.com/rss/0.xml",
-        "enabled": true,
-        "category": "tech-news"
-      },
       {
         "name": "量子位",
         "url": "https://wechat2rss.xlab.app/feed/7131b577c61365cb47e81000738c10d872685908.xml",
@@ -62,119 +25,35 @@
         "category": "ai-news"
       },
       {
-        "name": "新智元",
-        "url": "https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml",
-        "enabled": true,
-        "category": "ai-news"
-      },
-      {
-        "name": "GitHub Trending",
-        "url": "https://mshibanern.github.io/GitHubTrendingRSS/daily/all.xml",
-        "enabled": true,
-        "category": "open-source"
-      },
-      {
         "name": "Hacker News",
-        "url": "https://hnrss.org/frontpage?points=50",
+        "url": "https://hnrss.org/frontpage?points=100",
         "enabled": true,
         "category": "tech"
-      },
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/feed/",
-        "enabled": true,
-        "category": "startup"
-      },
-      {
-        "name": "The Verge",
-        "url": "https://www.theverge.com/rss/index.xml",
-        "enabled": true,
-        "category": "tech-news"
       },
       {
         "name": "ESPN体育",
         "url": "https://www.espn.com/espn/rss/news",
         "enabled": true,
         "category": "sports"
-      },
-      {
-        "name": "韩联社科技",
-        "url": "https://en.yna.co.kr/rss/technology",
-        "enabled": true,
-        "category": "korea-tech"
-      },
-      {
-        "name": "朝鲜日报科技",
-        "url": "https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml&category=technology",
-        "enabled": true,
-        "category": "korea-tech"
       }
     ],
     "reddit": {
       "enabled": true,
       "subreddits": [
         {
-          "subreddit": "MachineLearning",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 15,
-          "min_score": 50
-        },
-        {
-          "subreddit": "programming",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 15,
-          "min_score": 50
-        },
-        {
           "subreddit": "technology",
           "enabled": true,
           "sort": "hot",
           "time_filter": "day",
-          "fetch_limit": 15,
-          "min_score": 100
-        },
-        {
-          "subreddit": "opensource",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 30
-        },
-        {
-          "subreddit": "startups",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 30
-        },
-        {
-          "subreddit": "sports",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 100
-        },
-        {
-          "subreddit": "korea",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 30
+          "fetch_limit": 5,
+          "min_score": 200
         }
       ],
-      "fetch_comments": 5
+      "fetch_comments": 3
     }
   },
   "filtering": {
-    "ai_score_threshold": 5.0,
+    "ai_score_threshold": 6.0,
     "time_window_hours": 24
   },
   "webhook": {
@@ -195,31 +74,19 @@
     "sections": [
       {
         "name": "🤖 AI / 大模型",
-        "keywords": ["ai", "llm", "gpt", "claude", "gemini", "大模型", "机器学习", "深度学习"]
+        "keywords": ["ai", "llm", "gpt", "claude", "gemini", "大模型", "机器学习"]
       },
       {
         "name": "💻 编程 / 开发",
-        "keywords": ["programming", "developer", "coding", "rust", "python", "javascript", "编程", "开发"]
+        "keywords": ["programming", "developer", "coding", "rust", "python", "javascript"]
       },
       {
         "name": "🌍 科技新闻",
-        "keywords": ["apple", "google", "microsoft", "tech", "科技", "苹果", "谷歌"]
-      },
-      {
-        "name": "🚀 创业 / 商业",
-        "keywords": ["startup", "funding", "ipo", "创业", "融资", "商业"]
-      },
-      {
-        "name": "📦 开源项目",
-        "keywords": ["open source", "github", "开源", "仓库"]
+        "keywords": ["apple", "google", "microsoft", "tech", "科技"]
       },
       {
         "name": "⚽ 体育",
-        "keywords": ["sports", "football", "basketball", "soccer", "体育", "足球", "篮球"]
-      },
-      {
-        "name": "🇰🇷 韩国科技",
-        "keywords": ["korea", "samsung", "lg", "hyundai", "韩国", "三星"]
+        "keywords": ["sports", "football", "basketball", "soccer", "体育"]
       }
     ]
   }
