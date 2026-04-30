@@ -177,6 +177,18 @@
     "ai_score_threshold": 5.0,
     "time_window_hours": 24
   },
+  "webhook": {
+    "enabled": true,
+    "url_env": "TELEGRAM_WEBHOOK_URL",
+    "delivery": "summary",
+    "platform": "generic",
+    "layout": "markdown",
+    "request_body": {
+      "chat_id": "#{chat_id}",
+      "text": "#{summary}",
+      "parse_mode": "Markdown"
+    }
+  },
   "output": {
     "languages": ["zh"],
     "title": "每日科技新闻速递",
