@@ -6,7 +6,7 @@
     "api_key_env": "OPENAI_API_KEY",
     "base_url": "https://token-plan-sgp.xiaomimimo.com/v1",
     "temperature": 0.3,
-    "max_tokens": 2048,
+    "max_tokens": 1024,
     "throttle_sec": 0
   },
   "languages": ["zh"],
@@ -14,8 +14,8 @@
     "github": [],
     "hackernews": {
       "enabled": true,
-      "fetch_top_stories": 10,
-      "min_score": 50
+      "fetch_top_stories": 5,
+      "min_score": 200
     },
     "rss": [
       {
