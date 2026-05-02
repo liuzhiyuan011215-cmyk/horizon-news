@@ -35,7 +35,11 @@
     "delivery": "summary",
     "platform": "generic",
     "layout": "markdown",
-    "request_body": "chat_id=6760290103&text=#{summary}&parse_mode=Markdown"
+    "request_body": {
+      "chat_id": "6760290103",
+      "text": "#{summary}",
+      "parse_mode": "Markdown"
+    }
   },
   "output": {
     "languages": ["zh"],
