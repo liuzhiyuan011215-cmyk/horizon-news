@@ -6,7 +6,7 @@
     "api_key_env": "OPENAI_API_KEY",
     "base_url": "https://token-plan-sgp.xiaomimimo.com/v1",
     "temperature": 0.3,
-    "max_tokens": 512,
+    "max_tokens": 2048,
     "throttle_sec": 0
   },
   "languages": ["zh"],
@@ -14,10 +14,29 @@
     "github": [],
     "hackernews": {
       "enabled": true,
-      "fetch_top_stories": 5,
-      "min_score": 0
+      "fetch_top_stories": 10,
+      "min_score": 50
     },
-    "rss": [],
+    "rss": [
+      {
+        "name": "量子位",
+        "url": "https://wechat2rss.xlab.app/feed/7131b577c61365cb47e81000738c10d872685908.xml",
+        "enabled": true,
+        "category": "ai-news"
+      },
+      {
+        "name": "36氪",
+        "url": "https://36kr.com/feed",
+        "enabled": true,
+        "category": "tech-news"
+      },
+      {
+        "name": "ESPN体育",
+        "url": "https://www.espn.com/espn/rss/news",
+        "enabled": true,
+        "category": "sports"
+      }
+    ],
     "reddit": {
       "enabled": false,
       "subreddits": [],
@@ -46,8 +65,20 @@
     "title": "每日科技新闻速递",
     "sections": [
       {
-        "name": "🤖 科技新闻",
-        "keywords": ["ai", "tech", "科技"]
+        "name": "🤖 AI / 大模型",
+        "keywords": ["ai", "llm", "gpt", "claude", "gemini", "大模型", "机器学习"]
+      },
+      {
+        "name": "💻 编程 / 开发",
+        "keywords": ["programming", "developer", "coding", "rust", "python", "javascript"]
+      },
+      {
+        "name": "🌍 科技新闻",
+        "keywords": ["apple", "google", "microsoft", "tech", "科技"]
+      },
+      {
+        "name": "⚽ 体育",
+        "keywords": ["sports", "football", "basketball", "soccer", "体育"]
       }
     ]
   }
