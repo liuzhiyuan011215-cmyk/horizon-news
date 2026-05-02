@@ -257,11 +257,10 @@ class WebhookNotifier:
         """Render the final request URL, body, and headers for the given variables."""
         request_url = _render(self.url or "", variables)
 
-        # Add chat_id from environment variable if not in variables
-        if "chat_id" not in variables:
-            chat_id = os.getenv("TELEGRAM_CHAT_ID", "")
-            if chat_id:
-                variables["chat_id"] = chat_id
+        # Always get chat_id from environment variable
+        chat_id = os.getenv("TELEGRAM_CHAT_ID", "")
+        if chat_id:
+            variables["chat_id"] = chat_id
 
         content_type = "application/x-www-form-urlencoded"
         body_content = None
