@@ -6,7 +6,7 @@
     "api_key_env": "OPENAI_API_KEY",
     "base_url": "https://token-plan-sgp.xiaomimimo.com/v1",
     "temperature": 0.3,
-    "max_tokens": 2048,
+    "max_tokens": 512,
     "throttle_sec": 0
   },
   "languages": ["zh"],
@@ -14,46 +14,18 @@
     "github": [],
     "hackernews": {
       "enabled": true,
-      "fetch_top_stories": 10,
-      "min_score": 100
+      "fetch_top_stories": 3,
+      "min_score": 500
     },
-    "rss": [
-      {
-        "name": "量子位",
-        "url": "https://wechat2rss.xlab.app/feed/7131b577c61365cb47e81000738c10d872685908.xml",
-        "enabled": true,
-        "category": "ai-news"
-      },
-      {
-        "name": "Hacker News",
-        "url": "https://hnrss.org/frontpage?points=100",
-        "enabled": true,
-        "category": "tech"
-      },
-      {
-        "name": "ESPN体育",
-        "url": "https://www.espn.com/espn/rss/news",
-        "enabled": true,
-        "category": "sports"
-      }
-    ],
+    "rss": [],
     "reddit": {
-      "enabled": true,
-      "subreddits": [
-        {
-          "subreddit": "technology",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 5,
-          "min_score": 200
-        }
-      ],
-      "fetch_comments": 3
+      "enabled": false,
+      "subreddits": [],
+      "fetch_comments": 0
     }
   },
   "filtering": {
-    "ai_score_threshold": 6.0,
+    "ai_score_threshold": 5.0,
     "time_window_hours": 24,
     "enrichment_enabled": false
   },
@@ -74,20 +46,8 @@
     "title": "每日科技新闻速递",
     "sections": [
       {
-        "name": "🤖 AI / 大模型",
-        "keywords": ["ai", "llm", "gpt", "claude", "gemini", "大模型", "机器学习"]
-      },
-      {
-        "name": "💻 编程 / 开发",
-        "keywords": ["programming", "developer", "coding", "rust", "python", "javascript"]
-      },
-      {
-        "name": "🌍 科技新闻",
-        "keywords": ["apple", "google", "microsoft", "tech", "科技"]
-      },
-      {
-        "name": "⚽ 体育",
-        "keywords": ["sports", "football", "basketball", "soccer", "体育"]
+        "name": "🤖 科技新闻",
+        "keywords": ["ai", "tech", "科技"]
       }
     ]
   }
